@@ -4,10 +4,13 @@ import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/
 
 import theme from './src/theme';
 
-import { Groups } from './src/screens/Groups';
-import { Loading } from '@components/Loading';
 import { StatusBar } from 'react-native';
+
+import { Loading } from '@components/Loading';
+
+import { Groups } from './src/screens/Groups';
 import { NewGroup } from '@screens/NewGroup';
+import { Players } from '@screens/Players';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -27,7 +30,7 @@ export default function App() {
       />
 
       {/* {fontsLoaded ? <Groups /> : <Loading />} */}
-      {fontsLoaded ? <NewGroup /> : <Loading />}
+      {fontsLoaded ? <Players /> : <Loading />}
 
     </ThemeProvider>
   );
